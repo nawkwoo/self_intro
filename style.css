@@ -179,3 +179,20 @@ body.dark-mode .skill-bar {
 body.dark-mode .skill-level {
     background-color: #00c772;
 }
+
+/* 커서 모양 */
+.right {
+	cursor: none;
+}
+
+.icon-container {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1000;
+    font-size: 50px;
+    color: #AF8F6F;
+}
+
+body.dark-mode .icon-container{
+    color: black;
+}
