@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Ownglyph_meetme-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Ownglyph_meetme-Rg', sans-serif;
+    background-color: #AF8F6F;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    background-color: #F8F4E1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.left {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.left h2, .left h3, .left p, .left ul {
+    margin: 10px 3px;
+}
+
+.left h2 {
+    color: #00c772;
+}
+
+.left h3 {
+    color: #AF8F6F;
+}
+
+.left p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    border: solid #AF8F6F 10px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.right {
+    width: 65%;
+    padding: 30px;
+    overflow: hidden;  
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+}
+
+.right section {
+    padding: 30px 60px;
+    margin-right: 30px;
+    width: calc(100% - 120px);
+    height: calc(100% - 60px);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 1000px){
+
+    body{
+        font-size: 12px;
+    }
+
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: auto;
+    } 
+
+    .left, .right{
+        width: 100%;
+        height: calc(100vh - 100px);
+    }
+    
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }    
+}
+
+.right > section:last-child{
+    margin-right: 0;
+}
+
+.right section h2{
+    color: #00c772;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    background-color: #76c7c0;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.right section ul{
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* 다크모드 스타일 */
+body.dark-mode {
+    background-color: #2c2c2c;
+    color: #f8f4e1;
+}
+
+body.dark-mode .container {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .left h2,
+body.dark-mode .right section h2 {
+    color: #00c772;
+}
+
+body.dark-mode .left h3 {
+    color: #af8f6f;
+}
+
+body.dark-mode .left p,
+body.dark-mode .right section {
+    color: #ddd;
+    background-color: #555;
+}
+
+body.dark-mode .skill-bar {
+    background-color: white;
+}
+
+body.dark-mode .skill-level {
+    background-color: #00c772;
+}
